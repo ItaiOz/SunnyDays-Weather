@@ -3,8 +3,8 @@
 
 Project was created in HTML, CSS and JavaScript.
 
-# Website makes use on a free weather apiKey which allows unlimited daily use.
-# Using DataBase allows user create his own personal locations list.
+### Website makes use on a free weather apiKey which allows unlimited daily use.
+### Using DataBase allows user create his own personal locations list.
 
 ## **Home Page - For registering to the website or login if already signed up**
 
