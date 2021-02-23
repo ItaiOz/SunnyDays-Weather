@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ex 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+
+<h1 style="text-align: center">Welcome to your personal location storage</h1>
+<p style="text-align: center">Type in your general details to start the registration process</p>
+<hr>
+
+
+<form action="/password" method="post" id = "details" class="jumbotron">
+    <div class="form-group">
+        <label for="first">First name:</label>
+        <input type="text" class="form-control" placeholder="Enter first name" name="first_name" id = "first">
+    </div>
+    <div class="form-group">
+        <label for="first">Last name:</label>
+        <input type="text" class="form-control" placeholder="Enter last name" name="last_name" id = "last">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name = "email" placeholder="Enter email" id = "mail">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" id = "sub">Submit</button>
+
+
+    <br><br>
+    <p>Already a member? Log in <a href="/login">here</a></p>
+    <div class="errorList"></div>
+    <p class = "errorList"><%= result %></p>
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script>
+    document.getElementById("sub").addEventListener('click', function(event){
+
+        let first = document.querySelector("#first").value;
+        let last = document.querySelector("#last").value;
+        let mail = document.querySelector("#mail").value;
+
+        document.querySelector(".errorList").innerHTML = "";
+
+        if(first.length === 0 || last.length === 0 || mail.length === 0){
+            event.preventDefault();
+            addToErrorLog("Fields can't be empty");
+        }
+
+        if(!/^[a-zA-Z]+$/.test(first) && first.length > 0){
+            event.preventDefault();
+            addToErrorLog("Names must include letters only");
+        }
+
+        if(!/^[a-zA-Z]+$/.test(last) && last.length > 0){
+            event.preventDefault();
+            addToErrorLog("Names must include letters only");
+        }
+
+
+    });
+
+    function addToErrorLog(str){
+        let newNode = document.createElement("p")
+        newNode.textContent = str;
+        document.querySelector("#errorList").appendChild(newNode);
+    }
+
+</script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunny Days</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/mainstyles.css">
+    <script src = "/javascripts/script.js"></script>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light"  style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/images/sun.svg">S-D</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/login" id="signOut">Sign Out</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/readme/readme.html">Readme</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id = "head"  style="display: flex">
+    <img src = "/images/sun.svg" id = "sun">
+    <div style="margin: 100px 0px 0px 30px" id = "htitle">
+        <h1>Sunny Days Weather</h1>
+        <p class="lead">Your forecast for the week, anywhere</p>
+    </div>
+
+</div>
+
+
+<div class = "row">
+    <div class ="jumbotron col-sm-12 col-md-10 col-lg-10 col-xl-2">
+    <div id = "intro">Hey <%= gname%>, welcome to your online weather assitant</div>
+        <select id ="drop" name= "drop" class = "btn btn-secondary dropdown-toggle dropdown-toggle-split">
+            <option class = opt>Location</option>
+        </select>
+        <img src = "">
+        <p></p>
+        <br>
+        <button type="button" class="btn btn-primary" id = "display" disabled = "disabled">Display</button>
+        <button type="button" class="btn btn-danger" id = "delete" disabled = "disabled" style="float: right">
+            Delete</button>
+
+        <div class = "details">
+            <div>
+                <label for="city" style="margin-top: 20px">City</label>
+                <input type="text" class="form-control" name="locat" id="city" placeholder="Insert letters only" style="margin-bottom: 10px">
+            </div>
+            <div>
+                <label for="longitude">Longitude</label>
+                <input type="text" class="form-control" name="long" id="longitude" placeholder="Must be between -180 and 180" style="margin-bottom: 10px">
+            </div>
+            <div>
+                <label for="Latitude">Latitude</label>
+                <input type="text" class="form-control" name = "lat" id="latitude" placeholder="Must be between -90 and 90" style="margin-bottom: 10px">
+            </div>
+        </div>
+
+
+             <button type="submit" class="btn btn-primary" id = "add btn">Add</button>
+            <button type="button" class="btn btn-danger" id = "reset" style="float: right">Reset data</button>
+
+        <div id = "errors" style="margin-bottom: 10px"></div>
+        <p class = "errorList"><%= result %></p>
+    </div>
+
+    <div class = "col-8 col-md-12 col-lg-9" style="display: none" id ="box">
+        <div class ="jumbotron" id = "disp" style="height: 50px"></div>
+
+        <div class = "container" style="width: 100%" id = "fcast">
+            <div class = "col-xs-12 col-sm-12 col-md-4 col-lg-9">
+                <div class = "days"></div>
+            </div>
+            <div class = "col-xs-12 col-sm-12 col-md-4 col-lg-9" style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+            <div class = "col-xs-12 col-sm-12 col-md-4 col-lg-9" style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+            <div style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+            <div style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+            <div style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+            <div style="inset-block: initial">
+                <div class = "days"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<center><img src =""></center>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

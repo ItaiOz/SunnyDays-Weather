@@ -1,0 +1,82 @@
+body{
+    background-image: url('/images/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#head {
+    padding-top: 55px;
+    justify-content: center;
+    font-family: "Arial Black";
+}
+
+#sun{
+    width: 200px;
+    height: 200px;
+}
+
+#disp{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    background-color: transparent;
+
+}
+
+.jumbotron{
+    background-color: rgba(243, 250, 251, 0.8);
+    margin: 50px;
+}
+
+.errNote{
+    margin-top: 10px;
+    color: red;
+}
+
+.links{
+        font-weight: bold;
+        margin-right: 10px;
+}
+
+.note{
+    margin-top: 10px;
+    color: dodgerblue;
+}
+
+.errorList{
+    margin-top: 10px;
+    color: dodgerblue;
+}
+.container{
+    margin-top: 50px;
+}
+
+.container > div{
+    justify-content: center;
+    width: 153px;
+    height: 346px;
+    background: rgba(243, 250, 251, 0.5);
+    display: inline-block;
+    border-style: outset;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#intro{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.imgs{
+    align-items: center;
+}
+
+.dayname{
+    font-weight: bold;
+}
+
+h1, .lead{
+    text-shadow: 5px 2px 12px white;
+}
