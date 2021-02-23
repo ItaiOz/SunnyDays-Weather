@@ -17,5 +17,5 @@ Personal Area - Getting access after validation with Users table
 
 Weather Display - Fecthing forecast from API
 
-
+![w5](https://user-images.githubusercontent.com/72853162/108846491-4f1b0c80-75e7-11eb-87dc-7154c303b5e0.JPG)
 
