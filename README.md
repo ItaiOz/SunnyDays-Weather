@@ -1,5 +1,5 @@
 # SunnyDays-Weather
-Web Programming Project
+**Web Programming Project**
 
 Project was created in HTML, CSS and JavaScript.
 
