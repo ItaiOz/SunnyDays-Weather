@@ -12,8 +12,8 @@ Home Page - For registering to to the website or login if already signed up
 
 Personal Area - Getting access after validation with Users table
 
-![w3](https://user-images.githubusercontent.com/72853162/108846039-d025d400-75e6-11eb-9550-a977433b38b0.JPG)
-![w4](https://user-images.githubusercontent.com/72853162/108846040-d0be6a80-75e6-11eb-908f-e9d5f9eb8ddf.JPG)
+![w3](https://user-images.githubusercontent.com/72853162/108846242-07948080-75e7-11eb-9160-c837a2262ccf.JPG)
+![w4](https://user-images.githubusercontent.com/72853162/108846246-082d1700-75e7-11eb-992c-556af21fc621.JPG)
 
 Weather Display - Fecthing forecast from API
 
